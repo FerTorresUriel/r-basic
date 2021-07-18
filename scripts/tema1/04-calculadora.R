@@ -152,6 +152,10 @@ x = x^2
 
 x = sqrt(x)
 
+
+# Funciones 
+presion = function(x,t) {91 - (200*10/(15*6*2))*(15*t/400)*x}
+
 ## Función f(x) = x^3 - (3^x)* sen(x)
 f = function(x) {
   x^3 - (3^x) * sin(x)
