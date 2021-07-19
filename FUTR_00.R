@@ -1,14 +1,57 @@
-#Como ocupar R como calculadora?
+#   PARA EJECUTAR CADA LINEA TECLEAR ENTER + CTRL
+#   PARA MOVERTE ENTRE LA CONSOLA Y EL SCRIPT PULSA CTR; + 1 O CTRL + 2  segun el caso 
+#   para lo anterior es importante que sean con los numeros superiores del teclado !!
+#   Para pedir ayuda, hay dos opciones
+##  Opcion 1
+##  cmd: help('algun_comando')
+### ejemplo:
+help("install.packages")
+# # Opcion 2
+# # cmd: ?algun_comando
+# # # ejemplo:
+?install.packages
+# Paquete como instalarlos y activarlos
+# # para instalar/actualizar un paquete:
+# # cmd: install.packages('nombre_paquete',dep = TRUE)
+# # # ejemplo
+install.packages('ggplot2',dep = TRUE)
+# # activa el paquete
+# # cmd: library(paquete)
+# # # ejemplo:
+library(ggplot2)
+# # desactiva el paquete
+# # cmd: detach('package:paquete',unload = TRUE) 
+# # aunque esto tambien puede ser controlado desde la ventana packages
+
+#   R COMO CALCULADORA
+#
+# # SUMAS Y MULTIPLICACIONES
+# # podemos ocupar R para hacer operaciones directamente como sigue:
+# # es importante tener cuidado con los parentesis 
+# # en este caso consideraria 5/2 + 3 no (5+3)/2 
 2*(3+5/2)
-
+#   no importa que tan alejado pongas la division
+2*(3+5    /2)
+#   por eso es mas recomendable poner los parenteris para especificar la operacion 
 2*((3+5)/2)
-
 2/3+5
-
-2%/%3+5
-
+# # COSCIENTE ENTERO
+# # cmd: `m%/%n`
+# # cuantas veces cabe el m en el n?
+2%/%3 
+17%/%4 # 4 pues 17/4 seria (4 + 1/4)
+# # ahora si queremos obtener ese 1/4 que nos faltaba podemos usar
+# #
+# # RESTO DE DIVISION ENTERA o MODULO
+# # cmd: `m%%n`
+# # cual es el faltante(resto) r , tal que suceda que m/n = m%/%n + r/n ?
+# # lo anterior es lo mismo que ->  m/n = m%/%n + (m%%n)/n
+# # otra forma de verlo es el numero de unidades que no alcanzaron a ser un n-entero
 2%%3
-
+17%%4
+# # esto es muy util para identificar numeros pares de numeros impares
+# # numero par(2n)      -> Sea q numero par, entonces q%%2 == 0 } es igual a cero
+# # numero impar(2n+1)  -> Sea q numero par, entonces q%%2 != 0 } es diferente de cero
 2^3*5
 
 2^-4
