@@ -1,4 +1,6 @@
 #Como ocupar R como calculadora?
+#podemos ocupar R para hacer operaciones directamente como sigue:
+# sumas, restas, multiplicaciones y divisiones
 2*(3+5/2)
 
 2*((3+5)/2)
